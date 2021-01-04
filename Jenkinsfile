@@ -11,6 +11,9 @@ environment {
     stages {
 	
 	   stage('Build') {
+	   when {
+  environment name: 'BRANCH_NAME', value: 'master'
+}
 	   
         steps {
 		  
