@@ -1,4 +1,7 @@
 pipeline {
+environment {
+  BUILD_VERSION = "1.0"
+}
 
     agent {
       label 'Docker'
@@ -11,7 +14,7 @@ pipeline {
 	   
         steps {
 		  
-		  sh ' echo "Build stage success" '
+		  sh ' echo "Build ${BUILD_VERSION} stage success" '
 		
           
 		}
@@ -43,7 +46,7 @@ pipeline {
 	post {
   always {
   
- sh ' echo "Post build Actions" '
+ sh ' echo "Application Version ${BUILD_VERSION}" '
     // One or more steps need to be included within each condition's block.
   }
 }
