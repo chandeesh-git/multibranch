@@ -11,7 +11,7 @@ pipeline {
 	   
         steps {
 		  
-		  sh ' echo "Build stage success" '
+		  sh ' echo "Building the application" '
 		
           
 		}
@@ -21,7 +21,7 @@ pipeline {
 	   
         steps {
 		  
-		  sh ' echo "Test stage success" '
+		  sh ' echo "Testing the application" '
 		
           
 		}
@@ -31,7 +31,7 @@ pipeline {
 	   
         steps {
 		  
-		  sh ' echo "Deployment stage success" '
+		  sh ' echo "Deploying the application" '
 		
           
 		}
