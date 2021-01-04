@@ -11,7 +11,7 @@ pipeline {
 	   
         steps {
 		  
-		  sh ' echo "Building the application" '
+		  sh ' echo "Build stage success" '
 		
           
 		}
@@ -21,7 +21,7 @@ pipeline {
 	   
         steps {
 		  
-		  sh ' echo "Testing the application" '
+		  sh ' echo "Test stage success" '
 		
           
 		}
@@ -31,7 +31,7 @@ pipeline {
 	   
         steps {
 		  
-		  sh ' echo "Deploying the application" '
+		  sh ' echo "Deployment stage success" '
 		
           
 		}
@@ -39,4 +39,12 @@ pipeline {
        }
        
     }   
+	
+	post {
+  always {
+  
+ sh ' echo "Post build Actions" '
+    // One or more steps need to be included within each condition's block.
+  }
+}
 }
