@@ -12,7 +12,7 @@ environment {
 	
 	   stage('Build') {
 	   when {
-  environment name: 'BRANCH_NAME', value: 'master'
+  environment name: 'BRANCH_NAME', value: 'dev'
 }
 	   
         steps {
